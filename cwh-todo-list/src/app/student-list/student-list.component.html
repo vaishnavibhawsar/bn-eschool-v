@@ -1,0 +1,29 @@
+<br><br>
+
+<div class="container-center"style="padding-left: 130px;">
+    <label>FILTER STUDENT</label><br>
+    <input class="search" type = "text" placeholder="Search"  [(ngModel)]="searchtext">
+</div>
+<div class="container">
+<div class="table-responsive">
+   <br>            
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor ="let e of data |search :searchtext">
+            <td>{{e.name}}</td>
+            <td>{{e.sname}}</td>
+            <td>{{e.email}}</td>
+        
+        </tr>
+    </tbody>
+    </table>
+  </div>  
+  </div>
+ 

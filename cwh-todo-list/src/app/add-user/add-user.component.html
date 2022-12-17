@@ -1,0 +1,89 @@
+<div>
+  <br>
+  <br>
+  <div class="container">
+  <div class="card rounded-7 text-black">
+  <div class ="card-body">
+  <label style="padding-left: 18em;" >USER DETAILS</label>
+  <!-- data:{{registerform | json}} -->
+
+  <br>
+  <br>
+  <div style="padding-left: 33px;">
+  <form [formGroup]="registerform" (ngSubmit)="Submit()" >
+  
+  <label for="firstname" class = "form-label">First name:</label>
+  <input type="text" size ="20" name="first"  id ="firstname" class="form-control" formControlName ="firstname">
+  <div class="form-text text-danger" *ngIf="firstname.errors?.['required'] && (firstname.touched || firstname.dirty)">
+    first name is required
+  </div>
+  <br>
+  <label for="lastname" class="form-label"> Last name:</label>
+  <input type="text" size ="20" id="lastname" class="form-control" formControlName ="lastname">
+  <div class="form-text text-danger" *ngIf="firstname.errors?.['required'] && (firstname.touched || firstname.dirty)">
+    last name is required
+  </div>
+  <br>
+  <label for ="email" class = "form-label">Email: </label>
+  <input type="email" size ="56"  id = "email" class = "form-control"  required formControlName ="email">
+  <div class="form-text text-danger" *ngIf="email.errors?.['required'] && (email.touched||email.dirty)">
+    email is required
+  </div>
+  <div class="form-text text-danger" *ngIf="email.errors?.['email'] && (email.touched||email.dirty)">
+    email is invalid
+  </div>
+  <br>
+  <label for="pass" class = "form-label">Password: </label>
+  <input type="password" id="pass" class="form-control" required  formControlName ="pass">
+  <div class="form-text text-danger" *ngIf="pass.errors?.['required'] && (pass.touched||pass.dirty)">
+    Password is required
+  </div>
+  <br>
+  <label for= "phno" class="form-label">Phone Number:</label>
+  <input type="text"size="12" id="phno" class="form-control"  required   formControlName ="phno">
+  <div class="form-text text-danger" *ngIf="phno.errors?.['required'] && (phno.dirty||phno.touched)">
+    Phone Number is required
+  </div>
+  <div class="form-text text-danger" *ngIf="phno.errors?.['maxlength'] && (phno.dirty||phno.touched)">
+    Phone Number is long
+  </div>
+  <div class="form-text text-danger" *ngIf="phno.errors?.['pattern'] && (phno.dirty||phno.touched)">
+    Phone Number is invalid
+  </div>
+  <div class="form-text text-danger" *ngIf="phno.errors?.['minlength'] && (phno.dirty||phno.touched)">
+    Phone Number is short
+  </div>
+  <br>
+  <label for="category" class="form-label" >Choose One:</label>
+   <select  style ="padding-right: 4em; " id="category" class="form-control"  required  formControlName ="category">
+    <option value="TEACHER" >1.TEACHER</option>
+    <option value="STUDENT">2.STUDENT</option>
+  </select>
+  <div class="form-text text-danger" *ngIf="category.errors?.['required'] && (category.dirty||category.touched)">
+    Choice is required
+  </div>
+  <br>
+  <!--
+  <div style ="padding-left: 5em;">
+  <input type="radio" value="Student" name="value" ngModel required #Student ="ngModel">
+  <label for="Student">Student</label><br>
+  <input type="radio"  value="Teacher" name="value"   ngModel required #Teacher ="ngModel">
+  <label for="Teacher">Teacher</label><br><br>
+  
+  </div>
+  -->
+  <br>
+  <br>
+  <div style="padding-left: 14em;">
+      <button class="btn btn-primary" type="Submit"  [disabled]="registerform.invalid">Submit</button>
+  </div>
+</form>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div class="alert" >
+
+</div> 
+{{fname}}

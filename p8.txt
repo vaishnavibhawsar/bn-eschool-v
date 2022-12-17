@@ -1,0 +1,24 @@
+type details = Array<{ firstn: string; lastn: string ; email:string; pas:string; phonn:string; prof:string }>;
+ fname:any;
+     lname:any;
+     mail:any;
+     pass:any;
+     category:any;
+     phn:any;
+     detail : details =[
+      {firstn:"",lastn: "",email:"",pas: "",phonn:"" ,  prof:""}];
+
+
+debugger
+      this.detail .push({firstn: this.fname, lastn: this.lname ,  email: this.mail ,  pas:this.pass ,phonn:this.phn ,  prof:this.category});
+
+
+      this.fname="";
+     this.lname="";
+     this.mail="";
+     this.pass="";
+     this.category="";
+     this.phn="";
+
+
+import { SharedService  } from "../shared.service";

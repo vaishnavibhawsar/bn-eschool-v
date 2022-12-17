@@ -1,0 +1,9 @@
+0. student 
+   teacher
+
+   -active disable 
+
+1 . update functnality
+
+
+angular folder structure

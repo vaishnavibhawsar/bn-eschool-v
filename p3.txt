@@ -1,0 +1,15 @@
+<script>
+  function auth(){
+    var username= document.getElementById("username").value;
+    var pass = document.getElementById("pass").value;
+    if(username =="admin" && pass=="admin@123"){
+      window.location.assign("studentpage.component.html");
+      alert("login succesfully");
+    }
+    else{
+      alert("invalid information");
+      return;
+    }
+    
+  }
+</script>

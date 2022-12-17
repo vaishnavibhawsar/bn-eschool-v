@@ -1,0 +1,10 @@
+forsubmit(val):
+forsubmit(form.val)
+ts
+save val.fname...
+firstname = val.fname;
+
+
+
+{ path: '**', component: PagenotfoundComponent },
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';

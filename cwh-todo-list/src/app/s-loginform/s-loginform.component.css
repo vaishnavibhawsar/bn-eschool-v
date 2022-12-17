@@ -1,0 +1,14 @@
+.text-danger{
+    color: red;
+}
+header{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px 50px;
+ 
+}
+.container{
+    width:40%;
+    
+}

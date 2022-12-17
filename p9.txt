@@ -1,0 +1,60 @@
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+
+    <div class="card rounded-7 text-black">
+    <div class ="card-body">
+    <label style="padding-left: 13em;" >USER DETAILS</label>
+    <br>
+    <br><br>
+    <form  (ngSubmit)="Submit()" style="padding-left: 33px;">
+    
+    <label >First name:</label>
+    <input type="text" size ="20" name="first" type="forn-control" >
+    <br>
+    <br>
+    <label >Last name:</label>
+    <input type="text" size ="20"  name="last" type="forn-control" >
+    
+    <br>
+    <br>
+    <label>Email: </label>
+    <input type="email" size ="56" name="email" ngModel required>
+    <br>
+    <br>
+    <label>Password: </label>
+    <input type="password" name="pass" ngModel required >
+    <label>Phone Number:</label>
+    <input type="tel"size="12" ngModel required  []>
+    <br><br>
+    <label>Choose One:</label>
+     <select  style ="padding-right: 4em; " name="Category" ngModel required  >
+      <option value="TEACHER" >1.TEACHER</option>
+      <option value="STUDENT">2.STUDENT</option>
+    </select>
+    <br>
+    <!--
+    <div style ="padding-left: 5em;">
+    <input type="radio" value="Student" name="value" ngModel required #Student ="ngModel">
+    <label for="Student">Student</label><br>
+    <input type="radio"  value="Teacher" name="value"   ngModel required #Teacher ="ngModel">
+    <label for="Teacher">Teacher</label><br><br>
+    
+    </div>
+    -->
+    <br>
+    <br>
+    <div style="padding-left: 14em;">
+        <button class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+</div>
+<div class="alert" >
+
+</div> 

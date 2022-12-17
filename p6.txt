@@ -1,0 +1,6 @@
+step 1:
+login through id pass
+step2:
+  a white page shoulde appear
+step 3:
+  welcome admin
